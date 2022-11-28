@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, autoUpdater, dialog } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -42,6 +42,11 @@ app.on('activate', () => {
   // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
+
+    const server = 'https://your-deployment-url.com'
+    const url = `${server}/update/${process.platform}/${app.getVersion()}`
+    autoUpdater.setFeedURL({ url });
+    autoUpdater.checkForUpdates()
   }
 });
 
