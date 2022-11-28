@@ -14,4 +14,3 @@
   - リントをかける。
 
 自動更新
-https://qiita.com/allJokin/items/76cd3f2627d1497d0a76#%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%AE%E8%A8%AD%E5%AE%9A
